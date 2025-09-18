@@ -77,7 +77,130 @@ function initScrollAnimations() {
 
 
 
-// Fonction pour ouvrir la vidéo YouTube
+// Fonction pour afficher le lecteur vidéo embarqué
+// Variables globales pour le contrôle du lecteur vidéo
+let isVideoPlayerOpen = false;
+let initialScrollPosition = 0;
+let scrollListener = null;
+let youtubePlayer = null;
+
+function showVideoPlayer() {
+    const thumbnailContainer = document.getElementById('video-thumbnail-container');
+    const playerContainer = document.getElementById('video-player-container');
+    const iframe = document.getElementById('youtube-player');
+    
+    // Marquer que le lecteur est ouvert
+    isVideoPlayerOpen = true;
+    initialScrollPosition = window.pageYOffset;
+    
+    // Masquer la miniature avec une transition
+    thumbnailContainer.style.opacity = '0';
+    thumbnailContainer.style.transform = 'scale(0.95)';
+    
+    setTimeout(() => {
+        // Cacher complètement la miniature
+        thumbnailContainer.style.display = 'none';
+        
+        // Charger la vidéo (lazy loading)
+        if (iframe.getAttribute('data-src')) {
+            iframe.src = iframe.getAttribute('data-src');
+            iframe.removeAttribute('data-src');
+        }
+        
+        // Afficher le lecteur
+        playerContainer.style.display = 'block';
+        
+        // Animation d'apparition du lecteur
+        setTimeout(() => {
+            playerContainer.style.opacity = '1';
+            playerContainer.style.transform = 'scale(1)';
+            
+            // Initialiser les écouteurs d'événements pour la fermeture automatique
+            initVideoCloseListeners();
+        }, 50);
+    }, 300);
+}
+
+function closeVideoPlayer() {
+    const thumbnailContainer = document.getElementById('video-thumbnail-container');
+    const playerContainer = document.getElementById('video-player-container');
+    const iframe = document.getElementById('youtube-player');
+    
+    if (!isVideoPlayerOpen) return;
+    
+    // Marquer que le lecteur est fermé
+    isVideoPlayerOpen = false;
+    
+    // Supprimer les écouteurs d'événements
+    removeVideoCloseListeners();
+    
+    // Masquer le lecteur avec une transition
+    playerContainer.style.opacity = '0';
+    playerContainer.style.transform = 'scale(0.95)';
+    
+    setTimeout(() => {
+        // Cacher complètement le lecteur
+        playerContainer.style.display = 'none';
+        
+        // Arrêter la vidéo en rechargeant l'iframe
+        iframe.src = '';
+        iframe.setAttribute('data-src', 'https://www.youtube.com/embed/JL-62fBOmgk?si=kG2tZyxCV_3a2j4T&autoplay=1&rel=0&modestbranding=1&enablejsapi=1');
+        
+        // Réafficher la miniature
+        thumbnailContainer.style.display = 'block';
+        
+        // Animation d'apparition de la miniature
+        setTimeout(() => {
+            thumbnailContainer.style.opacity = '1';
+            thumbnailContainer.style.transform = 'scale(1)';
+        }, 50);
+    }, 300);
+}
+
+function initVideoCloseListeners() {
+    // Écouteur de scroll
+    scrollListener = function() {
+        if (!isVideoPlayerOpen) return;
+        
+        const currentScrollPosition = window.pageYOffset;
+        const scrollDifference = Math.abs(currentScrollPosition - initialScrollPosition);
+        
+        // Fermer si on scroll de plus de 400px
+        if (scrollDifference > 400) {
+            closeVideoPlayer();
+        }
+    };
+    
+    window.addEventListener('scroll', scrollListener, { passive: true });
+    
+    // Écouteur pour la pause de la vidéo YouTube
+    // Utiliser l'API YouTube pour détecter les changements d'état
+    window.addEventListener('message', function(event) {
+        if (!isVideoPlayerOpen) return;
+        
+        // Vérifier si le message provient de YouTube
+        if (event.origin !== 'https://www.youtube.com') return;
+        
+        try {
+            const data = JSON.parse(event.data);
+            // État 2 = pause dans l'API YouTube
+            if (data.event === 'video-progress' || (data.info && data.info.playerState === 2)) {
+                closeVideoPlayer();
+            }
+        } catch (e) {
+            // Ignorer les erreurs de parsing JSON
+        }
+    });
+}
+
+function removeVideoCloseListeners() {
+    if (scrollListener) {
+        window.removeEventListener('scroll', scrollListener);
+        scrollListener = null;
+    }
+}
+
+// Ancienne fonction openVideo (gardée pour compatibilité)
 function openVideo() {
     const videoUrl = 'https://youtu.be/JL-62fBOmgk?si=kG2tZyxCV_3a2j4T';
     window.open(videoUrl, '_blank');

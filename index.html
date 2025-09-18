@@ -131,8 +131,23 @@
     <section id="video" class="video-section">
         <div class="container">
             <div class="video-container">
-                <img src="images/miniature-video.png" alt="Miniature vidéo" class="video-thumbnail">
-                <button class="play-button" onclick="openVideo()"></button>
+                <!-- Image miniature (visible par défaut) -->
+                <div id="video-thumbnail-container" class="video-thumbnail-container">
+                    <img src="images/miniature-video.png" alt="Miniature vidéo" class="video-thumbnail">
+                    <button class="play-button" onclick="showVideoPlayer()"></button>
+                </div>
+                
+                <!-- Lecteur YouTube embed (caché par défaut) -->
+                <div id="video-player-container" class="video-player-container" style="display: none;">
+                    <iframe 
+                        id="youtube-player"
+                        data-src="https://www.youtube.com/embed/JL-62fBOmgk?si=kG2tZyxCV_3a2j4T&autoplay=1&rel=0&modestbranding=1"
+                        title="Metagora Video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -261,7 +276,6 @@
                     </p>
                     <div class="impact-features">
                         <div class="impact-feature">
-                            <img src="images/icone-data-charts.png" alt="Impact Icon" class="impact-feature-icon">
                             <div class="impact-feature-content">
                                 <h3 class="impact-feature-title">Turn AI Training Into Impact</h3>
                                 <p class="impact-feature-text">
@@ -270,7 +284,6 @@
                             </div>
                         </div>
                         <div class="impact-feature">
-                            <img src="images/icone-coaching-feedback.png" alt="Geo Icon" class="impact-feature-icon">
                             <div class="impact-feature-content">
                                 <h3 class="impact-feature-title">See Where Your Sales Team Stand</h3>
                                 <p class="impact-feature-text">
