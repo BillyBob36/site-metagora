@@ -77,12 +77,28 @@
     <script>
         // Fonction de détection et redirection automatique
         function detectLanguageAndRedirect() {
+            // Vérifier d'abord si on arrive avec un chemin spécifique (/en ou /zh)
+            const currentPath = window.location.pathname;
+            
+            // Gestion des chemins directs depuis le domaine personnalisé
+            if (currentPath === '/en' || currentPath === '/en/') {
+                window.location.href = 'en/index.html';
+                return;
+            }
+            
+            if (currentPath === '/zh' || currentPath === '/zh/') {
+                window.location.href = 'zh/index.html';
+                return;
+            }
+            
+            // Si on est déjà dans un sous-dossier, ne pas rediriger
+            if (currentPath.includes('/fr/') || currentPath.includes('/en/') || currentPath.includes('/zh/')) {
+                return;
+            }
+            
             // Récupérer la langue du navigateur
             const userLang = navigator.language || navigator.userLanguage;
             const langCode = userLang.substring(0, 2).toLowerCase();
-            
-            // Récupérer le pays depuis l'API de géolocalisation (optionnel)
-            // Pour une solution plus robuste, vous pourriez utiliser une API de géolocalisation IP
             
             // Mapping des langues supportées
             const supportedLanguages = {
@@ -113,8 +129,13 @@
             }
         }
         
-        // Attendre 1.5 secondes puis rediriger
-        setTimeout(detectLanguageAndRedirect, 1500);
+        // Exécuter immédiatement pour les chemins directs, sinon attendre 1.5 secondes
+        const currentPath = window.location.pathname;
+        if (currentPath === '/en' || currentPath === '/en/' || currentPath === '/zh' || currentPath === '/zh/') {
+            detectLanguageAndRedirect();
+        } else {
+            setTimeout(detectLanguageAndRedirect, 1500);
+        }
         
         // Permettre la redirection immédiate si l'utilisateur clique sur un lien
         document.querySelectorAll('.language-selector a').forEach(link => {
