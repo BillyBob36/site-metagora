@@ -958,8 +958,8 @@ body {
 }
 
 .rocket-image {
-    width: 75%;
-    height: 250px;
+    width: 100%;
+    height: 500px;
     object-fit: contain;
     border-radius: 0;
     box-shadow: none;
@@ -1116,7 +1116,7 @@ body {
         width: 100%;
         max-height: 300px;
         height: 300px;
-        background-image: url('images/avatar-train-groupe.webp');
+        background-image: url('../images/avatar-train-groupe.webp');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -1124,8 +1124,8 @@ body {
     }
     
     .rocket-image {
-        width: 37.5%; /* 2x plus petit que les 75% du desktop */
-        height: 188px;
+        width: 75%; /* 2x plus grand que les 37.5% précédents */
+        height: 376px; /* 2x plus grand que les 188px précédents */
     }
     
     .rocket-icon {
