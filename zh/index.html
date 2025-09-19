@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metagora - AI销售培训平台</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- EmailJS CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- New Header with Glassmorphism Design -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="../images/Logo-Metagora-Black.png" alt="Metagora" class="logo-img">
+                </div>
+                <nav class="nav-menu">
+                    <a href="#hero" class="nav-link">概览</a>
+                    <a href="#features" class="nav-link">功能</a>
+                    <a href="#automations" class="nav-link">影响</a>
+                </nav>
+                <div class="nav-right">
+                    <a href="#contact" class="btn-contact">联系我们</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 1: Hero avec dégradé -->
+    <section id="hero" class="fond-metagora">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">遇见您的虚拟客户！</h1>
+                    <h2 class="hero-subtitle">高效、有效且可衡量的AI销售培训</h2>
+                    <p class="hero-description">
+                        提升您的销售顾问，达到卓越水平。立即开始您的沉浸式AI培训。
+                    </p>
+                    <p class="hero-description-2">
+                        从策略到实施，我们在这里确保您的商业项目成功。
+                    </p>
+                </div>
+                <div class="hero-image">
+                    <img src="../images/pose-badass.png" alt="Virtual Client" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Marquee des partenaires -->
+    <section id="partners" class="partners-section">
+        <div class="container">
+            <h2 class="partners-title">
+                领导者选择Metagora AI来加速销售、培训和绩效。
+            </h2>
+        </div>
+        <div class="marquee-container">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <img src="../images/partenairs/68c6855f5c347e99a3a97ae6_Amazon_logo.svg" alt="Amazon" class="partner-logo">
+                    <img src="../images/partenairs/68c68495b89888356e01d74e_Sony_Music_Entertainment.svg" alt="Sony Music" class="partner-logo">
+                    <img src="../images/partenairs/68c6855f94d4d9cb1e81d3e2_photo_2025-09-14_15-04-38-p-800.jpg" alt="合作伙伴" class="partner-logo">
+                    <img src="../images/partenairs/68c6855faaa343d0c25b067f_photo_2025-09-14_15-04-44-p-800.jpg" alt="合作伙伴" class="partner-logo">
+                    <img src="../images/partenairs/68c6855fd1780ea07f744ad9_photo_2025-09-14_15-04-47.jpg" alt="合作伙伴" class="partner-logo">
+                </div>
+                <div class="marquee-content" aria-hidden="true">
+                    <img src="../images/partenairs/68c6855f5c347e99a3a97ae6_Amazon_logo.svg" alt="Amazon" class="partner-logo">
+                    <img src="../images/partenairs/68c68495b89888356e01d74e_Sony_Music_Entertainment.svg" alt="Sony Music" class="partner-logo">
+                    <img src="../images/partenairs/68c6855f94d4d9cb1e81d3e2_photo_2025-09-14_15-04-38-p-800.jpg" alt="合作伙伴" class="partner-logo">
+                    <img src="../images/partenairs/68c6855faaa343d0c25b067f_photo_2025-09-14_15-04-44-p-800.jpg" alt="合作伙伴" class="partner-logo">
+                    <img src="../images/partenairs/68c6855fd1780ea07f744ad9_photo_2025-09-14_15-04-47.jpg" alt="合作伙伴" class="partner-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Training -->
+    <section id="training" class="training-section">
+        <div class="container">
+            <div class="training-content">
+                <!-- Ligne 1 -->
+                <div class="training-row">
+                    <div class="training-text">
+                        <h2 class="training-title">通过AI + 3D的强大组合，更快更高效地销售</h2>
+                    </div>
+                    <div class="training-image-container">
+                        <img src="../images/rocket.png" alt="Rocket" class="rocket-image">
+                    </div>
+                </div>
+                
+                <!-- Ligne 2 -->
+                <div class="training-row training-row-reverse">
+                    <div class="training-image-container">
+                        <img src="../images/avatar-train-groupe.webp" alt="Avatar Training Group" class="training-image">
+                    </div>
+                    <div class="training-text">
+                        <div class="training-text-part1">
+                            <p class="training-description">
+                                <strong>想象您的销售顾问与真实客户的AI双胞胎进行培训<br></strong> 随时可用，完美定制，专为提升绩效而设计。
+                            </p>
+                        </div>
+                        <div class="training-text-spacer" style="height: 0px;"></div>
+                        <div class="training-text-part2">
+                            <p class="training-description">
+                                <strong>想象每个销售顾问无限制地练习他们的技巧。<br></strong> 通过Metagora，持续培训融入日常工作，将练习转化为现实世界的绩效。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Vidéo -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <div class="video-container">
+                <!-- Image miniature (visible par défaut) -->
+                <div id="video-thumbnail-container" class="video-thumbnail-container">
+                    <img src="../images/miniature-video.png" alt="视频缩略图" class="video-thumbnail">
+                    <button class="play-button" onclick="showVideoPlayer()"></button>
+                </div>
+                
+                <!-- Lecteur YouTube embed (caché par défaut) -->
+                <div id="video-player-container" class="video-player-container" style="display: none;">
+                    <iframe 
+                        id="youtube-player"
+                        data-src="https://www.youtube.com/embed/JL-62fBOmgk?si=kG2tZyxCV_3a2j4T&autoplay=1&rel=0&modestbranding=1"
+                        title="Metagora Video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Features -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <!-- Ligne 1: Texte centré -->
+            <div class="features-header">
+                <p class="features-pretitle">24/7全天候高级虚拟客户</p>
+                <h2 class="features-title">推出惠及所有人的AI培训</h2>
+                <p class="features-description">
+                    通过Metagora，您的公司获得易于部署且完美适合您需求的AI解决方案。解决方案根据您的角色和培训内容进行定制，确保从第一天起就具有相关性和影响力。
+                </p>
+            </div>
+            
+            <!-- Lignes 2 et 3: Layout 2 colonnes -->
+            <div class="features-grid">
+                <!-- Ligne 1 -->
+                <div class="feature-item">
+                    <img src="../images/icone-blueprint-design.png" alt="Blueprint & Design" class="feature-icon">
+                    <h3 class="feature-title">设计</h3>
+                    <p class="feature-text">定义通向成功的行为，并使用您的产品、角色和剧本构建定制模拟</p>
+                </div>
+                
+                <div class="feature-item">
+                    <img src="../images/icone-training-practice.png" alt="Training & Practice" class="feature-icon">
+                    <h3 class="feature-title">培训</h3>
+                    <p class="feature-text">通过沉浸式模拟为您的销售团队提供无限练习，轻松掌握销售流程。</p>
+                </div>
+                
+                <!-- Ligne 2 -->
+                <div class="feature-item">
+                    <img src="../images/icone-coaching-feedback.png" alt="Coaching & Feedback" class="feature-icon">
+                    <h3 class="feature-title">培训指导</h3>
+                    <p class="feature-text">Metagora AI实时评估每个回应，并提供自适应指导来弥补您团队的技能差距。</p>
+                </div>
+                
+                <div class="feature-item">
+                    <img src="../images/icone-data-charts.png" alt="Analyze Data & Charts" class="feature-icon">
+                    <h3 class="feature-title">仪表板</h3>
+                    <p class="feature-text">管理者可以访问清晰的仪表板，跟踪趋势，衡量绩效，并揭示所有员工需要发展的优先领域。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Learning Layout -->
+    <section id="learning" class="learning-section">
+        <div class="container">
+            <div class="learning-content">
+                <!-- Colonne 1: Image -->
+                <div class="learning-image">
+                    <img src="../images/learning.png" alt="AI Learning" class="learning-img">
+                </div>
+                
+                <!-- Colonne 2: Contenu texte -->
+                <div class="learning-text">
+                    <p class="learning-pretitle">发现AI培训的无限潜力</p>
+                    <h2 class="learning-title">加速销售准备</h2>
+                    <p class="learning-description">
+                        Metagora让您的销售团队从第一天起就能投入沉浸式AI模拟。不再等待真实客户或无休止的跟随——只有现实的、个性化的体验，加速入职和绩效提升。
+                    </p>
+                    <ul class="learning-list">
+                        <li>与您的客户进行真实对话练习</li>
+                        <li>从自适应AI教练那里获得即时、个性化的反馈</li>
+                        <li>通过无限制、无风险的培训课程建立信心</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Statistics -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-stat="70">
+                    <div class="stat-number">70%</div>
+                    <div class="stat-text">的培训在7天内被遗忘。</div>
+                </div>
+                
+                <div class="stat-item" data-stat="65">
+                    <div class="stat-number">65%</div>
+                    <div class="stat-text">的销售员工认为培训无效</div>
+                </div>
+                
+                <div class="stat-item" data-stat="32">
+                    <div class="stat-number">32%</div>
+                    <div class="stat-text">的销售员工表示他们没有接受正式培训</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: AI Automations -->
+    <section id="automations" class="automations-section">
+        <div class="container">
+            <div class="automations-content">
+                <div class="automations-text">
+                    <p class="automations-pretitle">AI自动化节省时间并发展您的业务！</p>
+                    <h2 class="automations-title">个性化培训，无风险练习</h2>
+                    <p class="automations-description">
+                        培训标准可能因团队而异。Metagora提供流畅、品牌一致的体验——确保每个顾问都接受相同的高标准培训，无论他们身在何处。
+                    </p>
+                </div>
+                <div class="automations-image">
+                    <img src="../images/pc-work-up.png" alt="PC Work" class="automations-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Impact & ROI -->
+    <section id="impact" class="impact-section">
+        <div class="container">
+            <div class="impact-content">
+                <div class="impact-image">
+                    <img src="../images/tablette-work-up.png" alt="Tablet Work" class="impact-img">
+                </div>
+                <div class="impact-text">
+                    <p class="impact-pretitle">分享关于参与度、满意度和知识差距的见解</p>
+                    <h2 class="impact-title">证明培训影响并衡量投资回报率</h2>
+                    <p class="impact-description">
+                        通过清晰的数据跟踪您培训的实际效果。平均而言，用户在前10次会话中看到关系温暖度提高24%，能力提升25%——推动销售绩效提升30%。
+                    </p>
+                    <div class="impact-features">
+                        <div class="impact-feature">
+                            <div class="impact-feature-content">
+                                <h3 class="impact-feature-title">将AI培训转化为现实世界的影响</h3>
+                                <p class="impact-feature-text">
+                                    监控参与度、满意度和知识差距，同时跟踪技能增长和与商业影响直接相关的绩效改进。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="impact-feature">
+                            <div class="impact-feature-content">
+                                <h3 class="impact-feature-title">可视化您销售团队的位置</h3>
+                                <p class="impact-feature-text">
+                                    通过您的销售数据驱动的个性化对话进行练习
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Contact Form -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-header">
+                    <h2 class="contact-title">准备好转变您的销售培训了吗？</h2>
+                    <p class="contact-description">
+                        联系我们，了解Metagora如何革命性地改变您的销售培训方法。
+                    </p>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="from_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">电话</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" id="email" name="from_email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">公司</label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">消息</label>
+                        <textarea id="message" name="message" rows="5" placeholder="告诉我们您的销售培训需求" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">发送</button>
+                    <div id="form-status" style="margin-top: 15px; padding: 10px; border-radius: 5px; display: none;"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

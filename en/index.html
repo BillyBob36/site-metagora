@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metagora - AI Sales Coaching Platform</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- EmailJS CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- New Header with Glassmorphism Design -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="../images/Logo-Metagora-Black.png" alt="Metagora" class="logo-img">
+                </div>
+                <nav class="nav-menu">
+                    <a href="#hero" class="nav-link">Overview</a>
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#automations" class="nav-link">Impact</a>
+                </nav>
+                <div class="nav-right">
+                    <a href="#contact" class="btn-contact">Contact</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 1: Hero avec dégradé -->
+    <section id="hero" class="fond-metagora">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Meet Your Virtual Customers!</h1>
+                    <h2 class="hero-subtitle">High-impact, effective, and measurable AI sales coaching</h2>
+                    <p class="hero-description">
+                        Boost your Sales Advisors and reach excellence. Start your immersive AI coaching today.
+                    </p>
+                    <p class="hero-description-2">
+                        From strategy to implementation, we're here to ensure your commercial project succeeds.
+                    </p>
+                </div>
+                <div class="hero-image">
+                    <img src="../images/pose-badass.png" alt="Virtual Client" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Marquee des partenaires -->
+    <section id="partners" class="partners-section">
+        <div class="container">
+            <h2 class="partners-title">
+                Leaders choose Metagora AI to accelerate sales, coaching, and performance.
+            </h2>
+        </div>
+        <div class="marquee-container">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <img src="../images/partenairs/68c6855f5c347e99a3a97ae6_Amazon_logo.svg" alt="Amazon" class="partner-logo">
+                    <img src="../images/partenairs/68c68495b89888356e01d74e_Sony_Music_Entertainment.svg" alt="Sony Music" class="partner-logo">
+                    <img src="../images/partenairs/68c6855f94d4d9cb1e81d3e2_photo_2025-09-14_15-04-38-p-800.jpg" alt="Partner" class="partner-logo">
+                    <img src="../images/partenairs/68c6855faaa343d0c25b067f_photo_2025-09-14_15-04-44-p-800.jpg" alt="Partner" class="partner-logo">
+                    <img src="../images/partenairs/68c6855fd1780ea07f744ad9_photo_2025-09-14_15-04-47.jpg" alt="Partner" class="partner-logo">
+                </div>
+                <div class="marquee-content" aria-hidden="true">
+                    <img src="../images/partenairs/68c6855f5c347e99a3a97ae6_Amazon_logo.svg" alt="Amazon" class="partner-logo">
+                    <img src="../images/partenairs/68c68495b89888356e01d74e_Sony_Music_Entertainment.svg" alt="Sony Music" class="partner-logo">
+                    <img src="../images/partenairs/68c6855f94d4d9cb1e81d3e2_photo_2025-09-14_15-04-38-p-800.jpg" alt="Partner" class="partner-logo">
+                    <img src="../images/partenairs/68c6855faaa343d0c25b067f_photo_2025-09-14_15-04-44-p-800.jpg" alt="Partner" class="partner-logo">
+                    <img src="../images/partenairs/68c6855fd1780ea07f744ad9_photo_2025-09-14_15-04-47.jpg" alt="Partner" class="partner-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Training -->
+    <section id="training" class="training-section">
+        <div class="container">
+            <div class="training-content">
+                <!-- Ligne 1 -->
+                <div class="training-row">
+                    <div class="training-text">
+                        <h2 class="training-title">Sell faster & more efficiently with the combined power of AI + 3D</h2>
+                    </div>
+                    <div class="training-image-container">
+                        <img src="../images/rocket.png" alt="Rocket" class="rocket-image">
+                    </div>
+                </div>
+                
+                <!-- Ligne 2 -->
+                <div class="training-row training-row-reverse">
+                    <div class="training-image-container">
+                        <img src="../images/avatar-train-groupe.webp" alt="Avatar Training Group" class="training-image">
+                    </div>
+                    <div class="training-text">
+                        <div class="training-text-part1">
+                            <p class="training-description">
+                                <strong>Imagine your sales advisors training with AI twins of your real customers<br></strong> always available, perfectly tailored, and designed to boost performance.
+                            </p>
+                        </div>
+                        <div class="training-text-spacer" style="height: 0px;"></div>
+                        <div class="training-text-part2">
+                            <p class="training-description">
+                                <strong>Imagine every sales advisor rehearsing their techniques without limits.<br></strong> With Metagora, continuous coaching blends into daily routines, turning practice into real-world performance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Vidéo -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <div class="video-container">
+                <!-- Image miniature (visible par défaut) -->
+                <div id="video-thumbnail-container" class="video-thumbnail-container">
+                    <img src="../images/miniature-video.png" alt="Video thumbnail" class="video-thumbnail">
+                    <button class="play-button" onclick="showVideoPlayer()"></button>
+                </div>
+                
+                <!-- Lecteur YouTube embed (caché par défaut) -->
+                <div id="video-player-container" class="video-player-container" style="display: none;">
+                    <iframe 
+                        id="youtube-player"
+                        data-src="https://www.youtube.com/embed/JL-62fBOmgk?si=kG2tZyxCV_3a2j4T&autoplay=1&rel=0&modestbranding=1"
+                        title="Metagora Video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Features -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <!-- Ligne 1: Texte centré -->
+            <div class="features-header">
+                <p class="features-pretitle">Advanced virtual customers available 24/7</p>
+                <h2 class="features-title">Roll out AI training that benefits everyone</h2>
+                <p class="features-description">
+                    With Metagora, your company gets an AI solution that's easy to deploy and perfectly tailored to your needs. Solutions are customized with your personas and training content, ensuring relevance and impact from day one.
+                </p>
+            </div>
+            
+            <!-- Lignes 2 et 3: Layout 2 colonnes -->
+            <div class="features-grid">
+                <!-- Ligne 1 -->
+                <div class="feature-item">
+                    <img src="../images/icone-blueprint-design.png" alt="Blueprint & Design" class="feature-icon">
+                    <h3 class="feature-title">Design</h3>
+                    <p class="feature-text">Define the behaviors that lead to success and build bespoke simulations using your products, personas, and playbooks</p>
+                </div>
+                
+                <div class="feature-item">
+                    <img src="../images/icone-training-practice.png" alt="Training & Practice" class="feature-icon">
+                    <h3 class="feature-title">Training</h3>
+                    <p class="feature-text">Give your sales teams unlimited practice through immersive simulations to master the sales process with ease.</p>
+                </div>
+                
+                <!-- Ligne 2 -->
+                <div class="feature-item">
+                    <img src="../images/icone-coaching-feedback.png" alt="Coaching & Feedback" class="feature-icon">
+                    <h3 class="feature-title">Coaching</h3>
+                    <p class="feature-text">Metagora AI evaluates every response in real time and provides adaptive coaching to close your teams' skill gaps.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <img src="../images/icone-data-charts.png" alt="Analyze Data & Charts" class="feature-icon">
+                    <h3 class="feature-title">Dashboards</h3>
+                    <p class="feature-text">Managers access clear dashboards that track trends, measure performance, and reveal priority areas to develop across all employees.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Learning Layout -->
+    <section id="learning" class="learning-section">
+        <div class="container">
+            <div class="learning-content">
+                <!-- Colonne 1: Image -->
+                <div class="learning-image">
+                    <img src="../images/learning.png" alt="AI Learning" class="learning-img">
+                </div>
+                
+                <!-- Colonne 2: Contenu texte -->
+                <div class="learning-text">
+                    <p class="learning-pretitle">Discover the limitless potential of AI Training</p>
+                    <h2 class="learning-title">Accelerate Sales Readiness</h2>
+                    <p class="learning-description">
+                        Metagora lets your sales teams dive into immersive AI simulations from day one. No more waiting for real customers or endless shadowing—just realistic, personalized experiences that speed up onboarding and performance.
+                    </p>
+                    <ul class="learning-list">
+                        <li>Practice genuine conversations with your customers</li>
+                        <li>Get instant, personalized feedback from an adaptive AI coach</li>
+                        <li>Build confidence with unlimited, risk-free training sessions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Statistics -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-stat="70">
+                    <div class="stat-number">70%</div>
+                    <div class="stat-text">of training is forgotten within 7 days.</div>
+                </div>
+                
+                <div class="stat-item" data-stat="65">
+                    <div class="stat-number">65%</div>
+                    <div class="stat-text">of sales employees find training ineffective</div>
+                </div>
+                
+                <div class="stat-item" data-stat="32">
+                    <div class="stat-number">32%</div>
+                    <div class="stat-text">of sales employees say they receive no formal training</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: AI Automations -->
+    <section id="automations" class="automations-section">
+        <div class="container">
+            <div class="automations-content">
+                <div class="automations-text">
+                    <p class="automations-pretitle">AI automations to save time and grow your business!</p>
+                    <h2 class="automations-title">Personalized Training, Risk-Free Practice</h2>
+                    <p class="automations-description">
+                        Training standards can vary from team to team. Metagora delivers a smooth, brand-consistent experience—ensuring every advisor is trained to the same high standard, wherever they are.
+                    </p>
+                </div>
+                <div class="automations-image">
+                    <img src="../images/pc-work-up.png" alt="PC Work" class="automations-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Impact & ROI -->
+    <section id="impact" class="impact-section">
+        <div class="container">
+            <div class="impact-content">
+                <div class="impact-image">
+                    <img src="../images/tablette-work-up.png" alt="Tablet Work" class="impact-img">
+                </div>
+                <div class="impact-text">
+                    <p class="impact-pretitle">Share insights on engagement, satisfaction, and knowledge gaps</p>
+                    <h2 class="impact-title">Prove coaching impact and measure ROI</h2>
+                    <p class="impact-description">
+                        Track the real-world effect of your coaching with clear data. On average, users see a 24% improvement in rapport warmth and a 25% increase in competence over their first 10 sessions—driving a 30% uplift in sales performance.
+                    </p>
+                    <div class="impact-features">
+                        <div class="impact-feature">
+                            <div class="impact-feature-content">
+                                <h3 class="impact-feature-title">Turn AI Training into Real-World Impact</h3>
+                                <p class="impact-feature-text">
+                                    Monitor engagement, satisfaction, and knowledge gaps while tracking skill growth and performance improvements directly tied to commercial impact.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="impact-feature">
+                            <div class="impact-feature-content">
+                                <h3 class="impact-feature-title">Visualize Your Sales Team's Position</h3>
+                                <p class="impact-feature-text">
+                                    Practice with personalized conversations powered by your sales data
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Contact Form -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-header">
+                    <h2 class="contact-title">Ready to transform your sales training?</h2>
+                    <p class="contact-description">
+                        Contact us to discover how Metagora can revolutionize your approach to sales coaching.
+                    </p>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="from_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="from_email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your sales training needs" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send</button>
+                    <div id="form-status" style="margin-top: 15px; padding: 10px; border-radius: 5px; display: none;"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
