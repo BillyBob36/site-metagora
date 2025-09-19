@@ -1124,6 +1124,7 @@ body {
     }
     
     .rocket-image {
+        width: 37.5%; /* 2x plus petit que les 75% du desktop */
         height: 188px;
     }
     
@@ -1179,6 +1180,7 @@ body {
     }
     
     .rocket-image {
+        width: 37.5%; /* 2x plus petit que les 75% du desktop */
         height: 250px;
     }
     
