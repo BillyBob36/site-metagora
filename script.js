@@ -326,3 +326,33 @@ if ('performance' in window) {
         }, 0);
     });
 }
+
+// Language Selector Dropdown Functionality
+function toggleLanguageDropdown() {
+    const dropdown = document.getElementById('langDropdown');
+    const button = document.querySelector('.lang-dropdown-btn');
+    
+    if (dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
+        button.classList.remove('active');
+    } else {
+        dropdown.classList.add('show');
+        button.classList.add('active');
+    }
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+    const languageSelector = document.querySelector('.language-selector');
+    const dropdown = document.getElementById('langDropdown');
+    const button = document.querySelector('.lang-dropdown-btn');
+    
+    if (languageSelector && !languageSelector.contains(event.target)) {
+        if (dropdown && dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show');
+            if (button) {
+                button.classList.remove('active');
+            }
+        }
+    }
+});

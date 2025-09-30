@@ -12,6 +12,9 @@
     
     <link rel="stylesheet" href="styles.css">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/Icon-Metagora.png">
+    
     <!-- EmailJS CDN -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
@@ -29,6 +32,21 @@
                     <a href="#automations" class="nav-link">Impact</a>
                 </nav>
                 <div class="nav-right">
+                    <div class="language-selector">
+                        <button class="lang-dropdown-btn" onclick="toggleLanguageDropdown()">
+                            <img src="../images/flag-gb.svg" alt="English" class="flag-icon">
+                        </button>
+                        <div class="lang-dropdown-menu" id="langDropdown">
+                            <a href="../index.html" class="lang-option">
+                                <img src="../images/flag-fr.svg" alt="Français" class="flag-icon">
+                                <span>Français</span>
+                            </a>
+                            <a href="../zh/index.html" class="lang-option">
+                                <img src="../images/flag-cn.svg" alt="中文" class="flag-icon">
+                                <span>中文</span>
+                            </a>
+                        </div>
+                    </div>
                     <a href="#contact" class="btn-contact">Contact</a>
                 </div>
                 <button class="mobile-menu-toggle">
