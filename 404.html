@@ -61,7 +61,7 @@
         
         <div class="fallback-links">
             <p>Si la redirection ne fonctionne pas, choisissez votre langue :</p>
-            <a href="/fr/">Français</a>
+            <a href="/">Français</a>
             <a href="/en/">English</a>
             <a href="/zh/">中文</a>
         </div>
@@ -91,7 +91,7 @@
             
             if (path === '/fr' || path === '/fr/') {
                 console.log('Redirecting to French version');
-                window.location.replace('/fr/index.html');
+                window.location.replace('/index.html');
                 return;
             }
             
@@ -122,9 +122,9 @@
                 const subPath = path.replace('/fr/', '');
                 if (subPath && subPath !== 'index.html') {
                     console.log('Redirecting to French subpath:', subPath);
-                    window.location.replace('/fr/index.html');
+                    window.location.replace('/index.html');
                 } else {
-                    window.location.replace('/fr/index.html');
+                    window.location.replace('/index.html');
                 }
                 return;
             }
@@ -132,7 +132,7 @@
             // Si aucune correspondance, rediriger vers la page d'accueil française
             console.log('No match found, redirecting to French homepage');
             setTimeout(() => {
-                window.location.replace('/fr/index.html');
+                window.location.replace('/index.html');
             }, 2000);
         }
         

@@ -106,6 +106,33 @@
         </div>
     </section>
 
+
+    <!-- Section 4: Vidéo -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <div class="video-container">
+                <!-- Image miniature (visible par défaut) -->
+                <div id="video-thumbnail-container" class="video-thumbnail-container">
+                    <img src="../images/miniature-video.png" alt="Video thumbnail" class="video-thumbnail">
+                    <button class="play-button" onclick="showVideoPlayer()"></button>
+                </div>
+                
+                <!-- Lecteur YouTube embed (caché par défaut) -->
+                <div id="video-player-container" class="video-player-container" style="display: none;">
+                    <iframe 
+                        id="youtube-player"
+                        data-src="https://www.youtube.com/embed/JL-62fBOmgk?si=kG2tZyxCV_3a2j4T&autoplay=1&rel=0&modestbranding=1"
+                        title="Metagora Video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
     <!-- Section 3: Training -->
     <section id="training" class="training-section">
         <div class="container">
@@ -143,30 +170,6 @@
         </div>
     </section>
 
-    <!-- Section 4: Vidéo -->
-    <section id="video" class="video-section">
-        <div class="container">
-            <div class="video-container">
-                <!-- Image miniature (visible par défaut) -->
-                <div id="video-thumbnail-container" class="video-thumbnail-container">
-                    <img src="../images/miniature-video.png" alt="Video thumbnail" class="video-thumbnail">
-                    <button class="play-button" onclick="showVideoPlayer()"></button>
-                </div>
-                
-                <!-- Lecteur YouTube embed (caché par défaut) -->
-                <div id="video-player-container" class="video-player-container" style="display: none;">
-                    <iframe 
-                        id="youtube-player"
-                        data-src="https://www.youtube.com/embed/JL-62fBOmgk?si=kG2tZyxCV_3a2j4T&autoplay=1&rel=0&modestbranding=1"
-                        title="Metagora Video"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Section 5: Features -->
     <section id="features" class="features-section">
